@@ -26,6 +26,7 @@ var longestValidParentheses = function(s) {
                     openParenthesis--
                     pointer++
                 } else if (s[pointer] === ')' && openParenthesis === 0) {
+                    i = pointer
                     break
                 }                
             }
@@ -34,6 +35,7 @@ var longestValidParentheses = function(s) {
         if (substringLength > result) {
             result = substringLength
         }
+        console.log(i)
     }
 
     return result
